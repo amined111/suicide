@@ -19,7 +19,7 @@ const gif = require("gif-search");
 
 const client = new Discord.Client({disableEveryone: true});
 
-const prefix = "D";
+const prefix = "S";
 /////////////////////////
 ////////////////////////
 
@@ -449,10 +449,10 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "485917652120764429") return;
+  if (message.author.id !== "431235811283828736") return;
  
 if (message.content.startsWith(prefix + 'setstream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/taino18");
+  client.user.setGame(argresult, "https://www.twitch.tv/aminoo");
      console.log('test' + argresult);
     message.channel.sendMessage(`Streaming: **${argresult}`)
 }
@@ -460,8 +460,8 @@ if (message.content.startsWith(prefix + 'setstream')) {
 
 client.on('ready',async () => {
 console.log("Starting..");
-let g = client.guilds.get("497527465787392016");
-let c = g.channels.get("497582850984509441");
+let g = client.guilds.get("406104798094557186");
+let c = g.channels.get("406111442417221642");
 if(c.type === 'voice') {
 c.join();
 setInterval(() => {
