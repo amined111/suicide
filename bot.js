@@ -219,7 +219,7 @@ client.on('message', async msg => {
           }
         })
         serverQueue.volume = args[1];
-        serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
+        serverQueue.connection.dispatcher.setVolLogarithmic(args[1] / 5);
         return msg.channel.send({embed: {
             color: 15158332,
             fields: [{
@@ -292,7 +292,7 @@ client.on('message', async msg => {
 **${prefix}play** - تشغيل اغنيه.\n\
 **${prefix}skip** - تخطيها.\n\
 **${prefix}stop** - ايقافها.\n\
-**${prefix}volume** - التحكم في درجه الصوت.\n\
+**${prefix}vol** - التحكم في درجه الصوت.\n\
 **${prefix}np** - قيد التشغيل .\n\
 **${prefix}queue** - لائحه الاغاني .\n\
 **${prefix}pause** - ايقاف مؤقت.\n\
@@ -302,7 +302,7 @@ client.on('message', async msg => {
             timestamp: new Date(),
             footer: {
               icon_url: client.user.avatarURL,
-              text: "made by : taino"
+              text: "A."
             }
           }
         });
