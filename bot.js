@@ -218,8 +218,8 @@ client.on('message', async msg => {
             ]
           }
         })
-        serverQueue.volume = args[1];
-        serverQueue.connection.dispatcher.setVolLogarithmic(args[1] / 5);
+        serverQueue.vol = args[1];
+        serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
         return msg.channel.send({embed: {
             color: 15158332,
             fields: [{
