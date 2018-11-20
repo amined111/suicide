@@ -450,7 +450,21 @@ client.on('message', message => {
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
   if (message.author.id !== "485917652120764429") return;
- 
+	
+if (message.content.startsWith(prefix + 'playing')) {
+      client.user.setGame(argresult);
+        message.channel.sendMessage(`**${argresult}** : Status changed`)
+}	
+if (message.content.startsWith(prefix + 'name')) {
+      client.user.setUsername(argresult).then
+          message.channel.sendMessage(`**${argresult}** : Name changed`)
+      return message.reply("**You**");
+} 
+if (message.content.startsWith(prefix + 'image')) {
+      client.user.setAvatar(argresult);
+        message.channel.sendMessage(`**${argresult}** : The bot image has been changed`);
+    
+} 
 if (message.content.startsWith(prefix + 'setstream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/aminoo");
      console.log('test' + argresult);
